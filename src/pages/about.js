@@ -1,7 +1,7 @@
 // Step 1: Import React
 import * as React from "react";
 import Layout from "../components/layout";
-import Seo from "../components/seo";
+import { Seo } from "../components/seo";
 
 // Step 2: Define your component
 const AboutPage = () => {
@@ -15,10 +15,23 @@ const AboutPage = () => {
 };
 
 export const Head = () => (
-  <>
-    <Seo title="About Me" />
-    <meta name="description" content="About me page" />
-  </>
+  <Seo title="About Me" description="About me page">
+    <script type="application/ld+json">
+      {`
+        {
+          "@context": "https://schema.org",
+          "@type": "Organization",
+          "url": "https://www.spookytech.com",
+          "name": "Spooky technologies",
+          "contactPoint": {
+            "@type": "ContactPoint",
+            "telephone": "+5-601-785-8543",
+            "contactType": "Customer Support"
+          }
+        }
+    `}
+    </script>
+  </Seo>
 );
 
 // Step 3: Export your component

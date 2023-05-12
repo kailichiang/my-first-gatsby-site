@@ -4,7 +4,10 @@
 module.exports = {
   siteMetadata: {
     title: `Awesome Gatsby`,
-    siteUrl: `https://www.yourdomain.tld`,
+    description: `Example project for the Gatsby`,
+    twitterUsername: `@kailichiang`,
+    image: `/gatsby-icon.png`,
+    siteUrl: `https://myfirstgatsbysitemain33548.gatsbyjs.io`,
   },
   plugins: ["gatsby-plugin-image", "gatsby-plugin-sharp"],
 };
